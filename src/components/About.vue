@@ -3,7 +3,7 @@
     <!-- About the page -->
     <section class="info">
       <!-- About -->
-      <span>Wtf is this</span>
+      <span>Wtf is this?</span>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
         accusantium reiciendis in incidunt ipsa neque, fugiat rerum. Totam

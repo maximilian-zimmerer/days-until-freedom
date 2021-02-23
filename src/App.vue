@@ -66,6 +66,11 @@ select:focus {
 input:-webkit-autofill::first-line {
   font-size: 17px;
 }
+input {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
