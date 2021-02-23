@@ -86,6 +86,9 @@ input:-webkit-autofill:active {
 textarea,
 textarea:focus,
 textarea:active {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {

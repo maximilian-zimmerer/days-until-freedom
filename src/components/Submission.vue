@@ -7,8 +7,8 @@
         type="text"
         v-model="text"
         :maxlength="max"
-        placeholder="Damn, I miss doing this..."
         onfocus="this.placeholder = ''"
+        placeholder="Damn, I miss doing this..."
         onblur="this.placeholder = 'Damn, I miss doing this...'"
       ></textarea>
       <!-- buttons -->
