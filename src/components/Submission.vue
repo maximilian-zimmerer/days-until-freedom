@@ -63,7 +63,7 @@ export default {
 .main-wrapper {
   width: 100%;
   height: 100%;
-  border-top: 1px solid black;
+  background-color: #4d511e;
 }
 .submission-form {
   width: 100%;
@@ -82,28 +82,36 @@ export default {
 }
 input[type="submit"] {
   height: 100%;
-  color: black;
+  color: #4d511e;
   border-radius: 100px;
-  border: 1px solid black;
+  background-color: #92b3c6;
 }
 .wordCount {
   padding: 1em;
-  color: black;
+  color: #4d511e;
   text-align: center;
-  border: 1px solid black;
   font-family: "Times New Roman", Times, serif;
+  background-color: #92b3c6;
 }
 textarea {
   resize: none;
-  color: black;
-  caret-color: black;
-  border-bottom: 1px solid black;
+  color: #4d511e;
+  border-bottom: 1px solid #4d511e;
+  background-color: #92b3c6;
+}
+::-moz-selection {
+  background: #4d511e;
+  color: #92b3c6;
+}
+::selection {
+  background: #4d511e;
+  color: #92b3c6;
 }
 @media (min-width: 600px) {
   input[type="submit"]:hover {
-    color: black;
+    color: #4d511e;
     transition: 0.2s;
-    border: 1px solid black;
+    border: 1px solid #4d511e;
   }
 }
 </style>

@@ -35,8 +35,7 @@ export default {
       let h = Math.floor((distance % day) / hour);
       let m = Math.floor((distance % hour) / minute);
       let s = Math.floor((distance % minute) / second);
-      this.remaining =
-        d + "days " + h + "hours " + m + "minutes " + s + "seconds ";
+      this.remaining = d + "d " + h + "h " + m + "m " + s + "s ";
     },
     toggleIndex() {
       this.index < this.phrases.length - 1 ? this.index++ : (this.index = 0);
@@ -44,7 +43,7 @@ export default {
   },
   computed: {
     currentPhrase() {
-      return this.phrases[this.index].text;
+      return this.phrases[this.index].text.toLowerCase();
     },
   },
   mounted() {
@@ -62,7 +61,9 @@ export default {
   height: 100%;
   padding: 2em;
   display: flex;
+  color: #eba23b;
   align-items: center;
+  background: #4d511e;
   flex-direction: column;
   justify-content: center;
 }
@@ -73,11 +74,9 @@ span {
 #until {
   padding: 0 0 1em 0;
 }
-#until,
-#phrase {
+#until {
   font-family: "Times New Roman", Times, serif;
 }
-
 @media (min-width: 320px) and (max-width: 480px) {
 }
 @media (min-width: 481px) and (max-width: 768px) {

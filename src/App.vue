@@ -15,17 +15,19 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: Haas;
+  src: url("./assets/fonts/Neue.ttf");
+}
 html,
 body {
   margin: 0;
   width: 100%;
   height: 100%;
-  color: black;
   font-size: 17px;
-  background: white;
+
   -webkit-text-size-adjust: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Haas;
 }
 *,
 ::after,
@@ -38,7 +40,7 @@ body {
   display: none;
 }
 .accent {
-  color: black;
+  color: #eba23b;
   display: inline;
   font-family: "Times New Roman", Times, serif !important;
 }
@@ -54,10 +56,10 @@ select:focus {
   padding: 1em;
   border: none;
   outline: none;
-  color: black;
+  color: #eba23b;
   font-size: 17px;
   cursor: pointer;
-  caret-color: black;
+  caret-color: #4d511e;
   border-color: transparent;
   background-color: transparent;
 }
@@ -71,10 +73,10 @@ input:-webkit-autofill:active {
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
-  border-bottom: 1px solid black;
-  -webkit-text-fill-color: black !important;
-  box-shadow: 0 0 0 2em black inset !important;
-  -webkit-box-shadow: 0 0 0 2em black inset !important;
+  border-bottom: 1px solid #eba23b;
+  -webkit-text-fill-color: #eba23b !important;
+  box-shadow: 0 0 0 2em #eba23b inset !important;
+  -webkit-box-shadow: 0 0 0 2em #eba23b inset !important;
 }
 textarea,
 textarea:focus,
@@ -82,7 +84,7 @@ textarea:active {
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {
-  color: black !important;
+  color: #4d511e !important;
 }
 @media (min-width: 769px) {
   html,

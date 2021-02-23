@@ -1,8 +1,9 @@
 <template>
   <div class="main-wrapper">
+    <!-- About the page -->
     <section class="info">
       <!-- About -->
-      <span>1. About</span>
+      <span>About</span>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
         accusantium reiciendis in incidunt ipsa neque, fugiat rerum. Totam
@@ -12,7 +13,7 @@
     </section>
     <!-- Stuff people miss -->
     <section class="phrases">
-      <span>2. Not much longer until...</span>
+      <span>Not much longer until...</span>
       <section class="scroll-container">
         <span v-for="phrase in phrases" :key="phrase.id"
           >{{ phrase.text }}
@@ -34,14 +35,28 @@ export default {
   width: 100%;
   height: 100%;
   display: grid;
-  background: white;
   flex-direction: column;
-  border-top: 1px solid black;
   grid-template-columns: 1fr 1fr;
 }
-span {
+.info {
+  background: #eba23b;
+}
+.phrases {
+  background: #92b3c6;
+}
+.info span {
   padding: 1em;
-  color: black;
+  color: #4d511e;
+  border-bottom: 1px solid #4d511e;
+}
+.info span:nth-of-type(2) {
+  font-family: "Times New Roman", Times, serif;
+  border: none;
+}
+.phrases span {
+  padding: 1em;
+  color: #4d511e;
+  border-bottom: 1px solid #4d511e;
 }
 section {
   height: 100%;
@@ -49,22 +64,13 @@ section {
   overflow: scroll;
   flex-direction: column;
 }
-span {
-  border-bottom: 1px solid black;
-}
-.info {
-  border-right: 1px solid black;
-}
-.info span:nth-of-type(2) {
-  font-family: "Times New Roman", Times, serif;
-  border: none;
-}
 .scroll-container {
   overflow: scroll;
 }
-.list-item {
-  font-family: "Times New Roman", Times, serif;
+.scroll-container span:nth-last-of-type(1) {
+  border-bottom: none;
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
   .main-wrapper {
     display: flex;
@@ -73,7 +79,6 @@ span {
   .info {
     flex-shrink: 0;
     border-right: none;
-    border-bottom: 1px solid black;
   }
   section {
     height: auto;
