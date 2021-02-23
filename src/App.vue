@@ -11,6 +11,11 @@ export default {
   components: {
     Home,
   },
+  data() {
+    return {
+      scrolled: false,
+    };
+  },
 };
 </script>
 
@@ -25,9 +30,9 @@ body {
   width: 100%;
   height: 100%;
   font-size: 17px;
-
-  -webkit-text-size-adjust: 100%;
   font-family: Haas;
+  background-color: #f5c1cd;
+  -webkit-text-size-adjust: 100%;
 }
 *,
 ::after,
@@ -56,10 +61,8 @@ select:focus {
   padding: 1em;
   border: none;
   outline: none;
-  color: #eba23b;
   font-size: 17px;
   cursor: pointer;
-  caret-color: #4d511e;
   border-color: transparent;
   background-color: transparent;
 }
@@ -86,16 +89,16 @@ input:-webkit-autofill:active {
 textarea,
 textarea:focus,
 textarea:active {
-  border-style: none;
   border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-appearance: none;
-  border-color: Transparent;
+  border: 1px solid #38146b;
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {
   color: #f5c1cd !important;
 }
+
 @media (min-width: 769px) {
   html,
   body,

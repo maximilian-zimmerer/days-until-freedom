@@ -78,6 +78,7 @@ span {
 #until {
   font-family: "Times New Roman", Times, serif;
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
 }
 @media (min-width: 481px) and (max-width: 768px) {

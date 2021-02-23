@@ -3,12 +3,18 @@
     <!-- About the page -->
     <section class="info">
       <!-- About -->
-      <span>Wtf is this?</span>
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-        accusantium reiciendis in incidunt ipsa neque, fugiat rerum. Totam
-        temporibus ea possimus quos quo autem quam labore! Vero aut debitis
-        similique?
+      <section class="info-header">
+        <span>Wtf is this?</span>
+        <span @click="toggle">{{ toggler }}</span>
+      </section>
+      <span class="info-body" v-if="toggleInfo">
+        On February 2, 2021, The Prime Minister set out a roadmap to cautiously
+        ease lockdown restrictions in the United Kingdom. By the last step,
+        which is reached no earlier than June 21, all legal limits on social
+        contact can be removed are hoped to be removed. This website lives to
+        emphasize people's anticipation for a normal life and invites the public
+        to submit things that they look forward to doing in a post-covid
+        England.
       </span>
     </section>
     <!-- Stuff people miss -->
@@ -27,6 +33,25 @@
 export default {
   name: "About",
   props: ["phrases"],
+  data() {
+    return {
+      toggleInfo: true,
+    };
+  },
+  methods: {
+    toggle() {
+      this.toggleInfo = !this.toggleInfo;
+    },
+  },
+  computed: {
+    toggler() {
+      if (this.toggleInfo) {
+        return "●";
+      } else {
+        return "○";
+      }
+    },
+  },
 };
 </script>
 
@@ -42,15 +67,26 @@ export default {
   background-color: #aae7e2;
 }
 .info span {
+  width: auto;
   padding: 1em;
-  color: #f04f33;
+  height: auto;
 }
-.info span:nth-of-type(1) {
+.info-header {
+  width: 100%;
+  height: auto;
+  display: flex;
   color: #aae7e2;
+  flex-direction: row;
   background-color: #f04f33;
+  justify-content: space-between;
 }
-.info span:nth-of-type(2) {
+.info-body {
+  height: 100%;
+  color: #f04f33;
   font-family: "Times New Roman", Times, serif;
+}
+.info-header span:nth-of-type(2) {
+  display: none;
 }
 .phrases {
   background-color: #f5c1cd;
@@ -89,6 +125,9 @@ section {
   .info {
     flex-shrink: 0;
     border-right: none;
+  }
+  .info-header span:nth-of-type(2) {
+    display: inline;
   }
   section {
     height: auto;

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div class="main-wrapper" @scroll="handleScroll">
     <!-- Header -->
     <section class="snap">
       <Header :phrases="phrases" />
@@ -11,6 +11,10 @@
     <!-- About -->
     <section class="snap">
       <About :phrases="phrases" />
+    </section>
+    <!-- main -->
+    <section v-if="!scrolled" class="nav">
+      <span>(Scroll to Add)</span>
     </section>
   </div>
 </template>
@@ -28,6 +32,7 @@ export default {
   data() {
     return {
       phrases: [],
+      scrolled: false,
     };
   },
   methods: {
@@ -49,6 +54,9 @@ export default {
         this.phrases.sort((p1, p2) => p2.timeStamp - p1.timeStamp);
       });
     },
+    handleScroll: function() {
+      this.scrolled = true;
+    },
   },
   mounted() {
     this.watchData();
@@ -64,8 +72,22 @@ export default {
   scroll-snap-type: y mandatory;
 }
 .snap {
+  z-index: 100;
   width: 100%;
   height: 100%;
   scroll-snap-align: start;
+}
+.nav {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+}
+.nav span {
+  color: #38146b;
+  font-family: "Times New Roman", Times, serif;
 }
 </style>

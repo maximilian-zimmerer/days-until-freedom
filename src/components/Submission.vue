@@ -122,9 +122,12 @@ textarea {
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   input[type="submit"]:hover {
-    background: #eba23b;
+    background: #f04f33;
   }
 }
 @media (min-width: 1201px) {
+  input[type="submit"]:hover {
+    background: #f04f33;
+  }
 }
 </style>
