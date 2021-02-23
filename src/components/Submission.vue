@@ -93,8 +93,11 @@ input[type="submit"] {
   font-family: "Times New Roman", Times, serif;
 }
 textarea {
+  width: 100%;
+  height: 100%;
   resize: none;
   color: #f5c1cd;
+  box-sizing: border-box;
   background-color: #38146b;
 }
 ::-moz-selection {

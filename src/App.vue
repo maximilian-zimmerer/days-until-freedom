@@ -31,7 +31,7 @@ body {
   height: 100%;
   font-size: 17px;
   font-family: Haas;
-  background-color: #f5c1cd;
+  background-color: #aae7e2;
   -webkit-text-size-adjust: 100%;
 }
 *,
@@ -92,7 +92,6 @@ textarea:active {
   border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-appearance: none;
-  border: 1px solid #38146b;
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {
