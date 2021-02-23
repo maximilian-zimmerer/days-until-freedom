@@ -63,7 +63,7 @@ export default {
 .main-wrapper {
   width: 100%;
   height: 100%;
-  background-color: #5603ad;
+  background-color: #f5c1cd;
 }
 .submission-form {
   width: 100%;
@@ -80,35 +80,51 @@ export default {
   flex-direction: row;
 }
 input[type="submit"] {
-  color: #5603ad;
+  color: #f5c1cd;
   border-radius: 50px;
-  background-color: #92b3c6;
+  background-color: #38146b;
 }
 .wordCount {
   padding: 1em;
-  color: #5603ad;
+  color: #f5c1cd;
   margin-right: 1em;
   text-align: center;
-  background-color: #92b3c6;
+  background-color: #38146b;
   font-family: "Times New Roman", Times, serif;
 }
 textarea {
   resize: none;
-  color: #5603ad;
-  background-color: #92b3c6;
-  border-bottom: 1px solid #5603ad;
+  color: #f5c1cd;
+  background-color: #38146b;
 }
 ::-moz-selection {
-  background: #5603ad;
-  color: #92b3c6;
+  background: #f5c1cd;
+  color: #38146b;
 }
 ::selection {
-  background: #5603ad;
-  color: #92b3c6;
+  background: #f5c1cd;
+  color: #38146b;
 }
-@media (min-width: 600px) {
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .wordCount,
+  input[type="submit"] {
+    flex: 1;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .wordCount,
+  input[type="submit"] {
+    flex: 1;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
   input[type="submit"]:hover {
     background: #eba23b;
   }
+}
+@media (min-width: 1201px) {
 }
 </style>

@@ -61,9 +61,9 @@ export default {
   height: 100%;
   padding: 2em;
   display: flex;
-  color: #eba23b;
+  color: #f04f33;
   align-items: center;
-  background: #4d511e;
+  background: #aae7e2;
   flex-direction: column;
   justify-content: center;
 }

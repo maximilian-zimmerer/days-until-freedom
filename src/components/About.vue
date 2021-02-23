@@ -39,30 +39,30 @@ export default {
   grid-template-columns: 1fr 1fr;
 }
 .info {
-  background: #eba23b;
+  background-color: #aae7e2;
 }
 .info span {
   padding: 1em;
-  color: #4d511e;
+  color: #f04f33;
 }
 .info span:nth-of-type(1) {
-  background-color: #4d511e;
-  color: #eba23b;
+  color: #aae7e2;
+  background-color: #f04f33;
 }
 .info span:nth-of-type(2) {
   font-family: "Times New Roman", Times, serif;
 }
 .phrases {
-  background: #5603ad;
+  background-color: #f5c1cd;
 }
 .phrases span {
   padding: 1em;
-  color: #92b3c6;
-  border-bottom: 1px solid #92b3c6;
+  color: #38146b;
+  border-bottom: 1px solid #38146b;
 }
 .phrases > span {
-  background-color: #92b3c6;
-  color: #5603ad;
+  background-color: #38146b;
+  color: #f5c1cd;
   border: none;
 }
 section {

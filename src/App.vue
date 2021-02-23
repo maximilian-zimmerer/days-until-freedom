@@ -86,13 +86,15 @@ input:-webkit-autofill:active {
 textarea,
 textarea:focus,
 textarea:active {
+  border-style: none;
   border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-appearance: none;
+  border-color: Transparent;
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {
-  color: #5603ad !important;
+  color: #f5c1cd !important;
 }
 @media (min-width: 769px) {
   html,
