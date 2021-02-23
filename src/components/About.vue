@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "Prompts",
+  name: "About",
   props: ["phrases"],
 };
 </script>

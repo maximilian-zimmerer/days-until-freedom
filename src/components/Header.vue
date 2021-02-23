@@ -3,7 +3,7 @@
     <span id="countdown">{{ remaining }}</span>
     <span id="until">until</span>
     <span id="phrase">
-      {{ this.phrases[this.index].text }}
+      {{ currentPhrase }}
     </span>
   </div>
 </template>
@@ -40,12 +40,18 @@ export default {
     },
     toggleIndex() {
       this.index < this.phrases.length - 1 ? this.index++ : (this.index = 0);
-      console.log(this.index);
+    },
+  },
+  computed: {
+    currentPhrase() {
+      return this.phrases[this.index].text;
     },
   },
   mounted() {
-    this.timer = setInterval(this.showRemaining, 1000);
-    setInterval(this.toggleIndex, 3000);
+    if (this.phrases) {
+      this.timer = setInterval(this.showRemaining, 1000);
+      setInterval(this.toggleIndex, 3000);
+    }
   },
 };
 </script>

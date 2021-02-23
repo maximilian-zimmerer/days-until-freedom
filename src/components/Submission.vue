@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import firebase from "firebase/app";
 import { v4 as uuidv4 } from "uuid";
 export default {
   name: "Submission",
@@ -33,9 +34,12 @@ export default {
   methods: {
     addPhrase() {
       if (this.text != "") {
+        const date = new Date();
+        const timeStamp = firebase.firestore.Timestamp.fromDate(date);
         let tempPhrase = {
           text: this.text,
           id: uuidv4(),
+          timeStamp: timeStamp.seconds,
         };
         this.$emit("addPhrase", tempPhrase);
         this.text = "";

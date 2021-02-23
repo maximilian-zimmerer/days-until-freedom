@@ -16,26 +16,42 @@
 </template>
 
 <script>
+import db from "../firebaseInit";
 import About from "@/components/About.vue";
 import Header from "@/components/Header.vue";
 import Submission from "@/components/Submission.vue";
+const fbPhrases = db.collection("phrases");
+
 export default {
   name: "Home",
   components: { Header, Submission, About },
   data() {
     return {
-      phrases: [
-        { text: "freedom", id: 0 },
-        { text: "we can dance again", id: 1 },
-        { text: "I can get drunk in public", id: 2 },
-      ],
+      phrases: [],
     };
   },
   methods: {
     updatePhrases(data) {
-      this.phrases.push(data);
-      console.log(this.phrases);
+      fbPhrases
+        .doc()
+        .set(data)
+        .catch((err) => {
+          console.error(err);
+        });
     },
+    watchData() {
+      fbPhrases.onSnapshot((snapshot) => {
+        let array = [];
+        snapshot.forEach((doc) => {
+          array.push(doc.data());
+        });
+        this.phrases = array;
+        this.phrases.sort((p1, p2) => p2.timeStamp - p1.timeStamp);
+      });
+    },
+  },
+  mounted() {
+    this.watchData();
   },
 };
 </script>
