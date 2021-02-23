@@ -63,7 +63,7 @@ export default {
 .main-wrapper {
   width: 100%;
   height: 100%;
-  background-color: #4d511e;
+  background-color: #5603ad;
 }
 .submission-form {
   width: 100%;
@@ -74,44 +74,41 @@ export default {
   grid-template-rows: auto auto;
 }
 .buttons {
-  gap: 1em;
   height: auto;
   padding: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
 }
 input[type="submit"] {
-  height: 100%;
-  color: #4d511e;
-  border-radius: 100px;
+  color: #5603ad;
+  border-radius: 50px;
   background-color: #92b3c6;
 }
 .wordCount {
   padding: 1em;
-  color: #4d511e;
+  color: #5603ad;
+  margin-right: 1em;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
   background-color: #92b3c6;
+  font-family: "Times New Roman", Times, serif;
 }
 textarea {
   resize: none;
-  color: #4d511e;
-  border-bottom: 1px solid #4d511e;
+  color: #5603ad;
   background-color: #92b3c6;
+  border-bottom: 1px solid #5603ad;
 }
 ::-moz-selection {
-  background: #4d511e;
+  background: #5603ad;
   color: #92b3c6;
 }
 ::selection {
-  background: #4d511e;
+  background: #5603ad;
   color: #92b3c6;
 }
 @media (min-width: 600px) {
   input[type="submit"]:hover {
-    color: #4d511e;
-    transition: 0.2s;
-    border: 1px solid #4d511e;
+    background: #eba23b;
   }
 }
 </style>

@@ -84,7 +84,7 @@ textarea:active {
   font-family: "Times New Roman", Times, serif !important;
 }
 ::placeholder {
-  color: #4d511e !important;
+  color: #5603ad !important;
 }
 @media (min-width: 769px) {
   html,

@@ -3,7 +3,7 @@
     <!-- About the page -->
     <section class="info">
       <!-- About -->
-      <span>About</span>
+      <span>Wtf is this</span>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
         accusantium reiciendis in incidunt ipsa neque, fugiat rerum. Totam
@@ -41,22 +41,29 @@ export default {
 .info {
   background: #eba23b;
 }
-.phrases {
-  background: #92b3c6;
-}
 .info span {
   padding: 1em;
   color: #4d511e;
-  border-bottom: 1px solid #4d511e;
+}
+.info span:nth-of-type(1) {
+  background-color: #4d511e;
+  color: #eba23b;
 }
 .info span:nth-of-type(2) {
   font-family: "Times New Roman", Times, serif;
-  border: none;
+}
+.phrases {
+  background: #5603ad;
 }
 .phrases span {
   padding: 1em;
-  color: #4d511e;
-  border-bottom: 1px solid #4d511e;
+  color: #92b3c6;
+  border-bottom: 1px solid #92b3c6;
+}
+.phrases > span {
+  background-color: #92b3c6;
+  color: #5603ad;
+  border: none;
 }
 section {
   height: 100%;
@@ -66,6 +73,9 @@ section {
 }
 .scroll-container {
   overflow: scroll;
+}
+.scroll-container span {
+  font-family: "Times New Roman", Times, serif;
 }
 .scroll-container span:nth-last-of-type(1) {
   border-bottom: none;
