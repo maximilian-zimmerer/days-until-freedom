@@ -24,6 +24,14 @@ export default {
   font-family: Haas;
   src: url("./assets/fonts/Neue.ttf");
 }
+@font-face {
+  font-family: Playfair;
+  src: url("./assets/fonts/Playfair.ttf");
+}
+@font-face {
+  font-family: Shippori;
+  src: url("./assets/fonts/Shippori.ttf");
+}
 html,
 body {
   margin: 0;
@@ -37,17 +45,16 @@ body {
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
+  user-select: none;
+  -ms-user-select: none;
   scrollbar-width: none;
+  -moz-user-select: none;
+  box-sizing: border-box;
   -ms-overflow-style: none;
+  -webkit-user-select: none;
 }
 ::-webkit-scrollbar {
   display: none;
-}
-.accent {
-  color: #eba23b;
-  display: inline;
-  font-family: "Times New Roman", Times, serif !important;
 }
 #app {
   width: 100%;
@@ -81,10 +88,10 @@ input:-webkit-autofill:active {
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
-  border-bottom: 1px solid #eba23b;
-  -webkit-text-fill-color: #eba23b !important;
-  box-shadow: 0 0 0 2em #eba23b inset !important;
-  -webkit-box-shadow: 0 0 0 2em #eba23b inset !important;
+  border-bottom: 1px solid #38146b;
+  -webkit-text-fill-color: #38146b !important;
+  box-shadow: 0 0 0 2em #38146b inset !important;
+  -webkit-box-shadow: 0 0 0 2em #38146b inset !important;
 }
 textarea,
 textarea:focus,
@@ -92,9 +99,10 @@ textarea:active {
   border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-appearance: none;
-  font-family: "Times New Roman", Times, serif !important;
+  font-family: Playfair !important;
 }
 ::placeholder {
+  font-family: Playfair;
   color: #f5c1cd !important;
 }
 .fade-enter-active,

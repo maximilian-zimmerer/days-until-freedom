@@ -7,6 +7,7 @@
         <span>Wtf is this?</span>
         <span @click="toggle">{{ toggler }}</span>
       </section>
+
       <span class="info-body" v-if="toggleInfo">
         On February 2, 2021, the Prime Minister set out a roadmap to cautiously
         ease lockdown restrictions in the United Kingdom. By the last step,
@@ -45,9 +46,9 @@ export default {
   computed: {
     toggler() {
       if (this.toggleInfo) {
-        return "⦿";
+        return "(Hide)";
       } else {
-        return "⦾";
+        return "(Show)";
       }
     },
   },
@@ -63,6 +64,7 @@ export default {
   grid-template-columns: 1fr 1fr;
 }
 .info {
+  height: auto;
   background-color: #aae7e2;
 }
 .info span {
@@ -80,14 +82,15 @@ export default {
   justify-content: space-between;
 }
 .info-body {
-  height: 100%;
   color: #f04f33;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Playfair;
 }
 .info-header span:nth-of-type(2) {
   display: none;
+  font-family: Playfair;
 }
 .phrases {
+  height: 100%;
   background-color: #f5c1cd;
 }
 .phrases span {
@@ -110,7 +113,7 @@ section {
   overflow: scroll;
 }
 .scroll-container span {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Playfair;
 }
 .scroll-container span:nth-last-of-type(1) {
   border-bottom: none;
@@ -131,13 +134,5 @@ section {
   section {
     height: auto;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
-@media (min-width: 1201px) {
 }
 </style>

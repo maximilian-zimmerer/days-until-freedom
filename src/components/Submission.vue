@@ -90,7 +90,7 @@ input[type="submit"] {
   margin-right: 1em;
   text-align: center;
   background-color: #38146b;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Playfair;
 }
 textarea {
   width: 100%;
@@ -122,6 +122,10 @@ textarea {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+  .wordCount,
+  input[type="submit"] {
+    flex: 1;
+  }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   input[type="submit"]:hover {

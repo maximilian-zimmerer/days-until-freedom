@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="timer" class="main-wrapper">
       <span id="countdown">{{ remaining }}</span>
-      <span id="until">until</span>
+      <span id="until">UNTIL</span>
       <span id="phrase">
         {{ currentPhrase }}
       </span>
@@ -29,10 +29,14 @@ export default {
       const hour = minute * 60;
       const day = hour * 24;
       let now = new Date();
-
-      // add function to handle time-reached event
-
       let distance = this.end - now;
+
+      if (distance < 0) {
+        clearInterval(this.timer);
+        this.remaining = 0;
+        return;
+      }
+
       let d = Math.floor(distance / day);
       let h = Math.floor((distance % day) / hour);
       let m = Math.floor((distance % hour) / minute);
@@ -78,17 +82,6 @@ span {
   padding: 0 0 1em 0;
 }
 #until {
-  font-family: "Times New Roman", Times, serif;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-}
-@media (min-width: 481px) and (max-width: 768px) {
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
-@media (min-width: 1201px) {
+  font-family: Playfair;
 }
 </style>

@@ -18,7 +18,7 @@
     </section>
     <!-- main -->
     <transition name="fade">
-      <section v-if="!scrolled" class="nav">
+      <section v-if="fader && !scrolled" class="nav">
         <span>(Scroll to Add)</span>
       </section>
     </transition>
@@ -39,6 +39,7 @@ export default {
   data() {
     return {
       phrases: [],
+      fader: false,
       scrolled: false,
     };
   },
@@ -67,6 +68,7 @@ export default {
   },
   mounted() {
     this.watchData();
+    this.fader = true;
   },
 };
 </script>
@@ -95,6 +97,6 @@ export default {
 }
 .nav span {
   color: #38146b;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Playfair;
 }
 </style>
