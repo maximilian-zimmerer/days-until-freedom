@@ -8,8 +8,8 @@
         v-model="text"
         :maxlength="max"
         onfocus="this.placeholder = ''"
-        placeholder="Damn, I miss doing this..."
-        onblur="this.placeholder = 'Damn, I miss doing this...'"
+        :placeholder="this.placeholder"
+        onblur="this.placeholder = 'I miss doing this...'"
       ></textarea>
       <!-- buttons -->
       <section class="buttons">
@@ -23,17 +23,24 @@
 <script>
 import firebase from "firebase/app";
 import { v4 as uuidv4 } from "uuid";
+const Filter = require("bad-words");
+const filter = new Filter();
+
 export default {
   name: "Submission",
   data() {
     return {
       max: 50,
       text: "",
+      placeholder: "I miss doing this...",
     };
   },
   methods: {
     addPhrase() {
-      if (this.text != "") {
+      if (filter.isProfane(this.text)) {
+        this.placeholder = "Please don't user profanity.";
+        this.text = "";
+      } else if (this.text != "") {
         const date = new Date();
         const timeStamp = firebase.firestore.Timestamp.fromDate(date);
         let tempPhrase = {
@@ -42,6 +49,7 @@ export default {
           timeStamp: timeStamp.seconds,
         };
         this.$emit("addPhrase", tempPhrase);
+        this.placeholder = "Submitted!";
         this.text = "";
       }
     },
@@ -92,6 +100,16 @@ input[type="submit"] {
   text-align: center;
   font-family: Playfair;
   background-color: #38146b;
+}
+.profanity {
+  padding: 1em;
+  min-width: 5em;
+  color: #f5c1cd;
+  margin-left: 1em;
+  text-align: center;
+  font-family: Playfair;
+  background-color: #f04f33;
+  border-radius: 50px 0 50px 0;
 }
 textarea {
   width: 100%;
