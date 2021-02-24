@@ -86,11 +86,12 @@ input[type="submit"] {
 }
 .wordCount {
   padding: 1em;
+  min-width: 5em;
   color: #f5c1cd;
   margin-right: 1em;
   text-align: center;
-  background-color: #38146b;
   font-family: Playfair;
+  background-color: #38146b;
 }
 textarea {
   width: 100%;

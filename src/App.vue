@@ -45,13 +45,9 @@ body {
 *,
 ::after,
 ::before {
-  user-select: none;
-  -ms-user-select: none;
   scrollbar-width: none;
-  -moz-user-select: none;
   box-sizing: border-box;
   -ms-overflow-style: none;
-  -webkit-user-select: none;
 }
 ::-webkit-scrollbar {
   display: none;
