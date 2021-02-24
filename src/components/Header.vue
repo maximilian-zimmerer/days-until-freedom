@@ -1,11 +1,13 @@
 <template>
-  <div class="main-wrapper">
-    <span id="countdown">{{ remaining }}</span>
-    <span id="until">until</span>
-    <span id="phrase">
-      {{ currentPhrase }}
-    </span>
-  </div>
+  <transition name="fade">
+    <div v-if="timer" class="main-wrapper">
+      <span id="countdown">{{ remaining }}</span>
+      <span id="until">until</span>
+      <span id="phrase">
+        {{ currentPhrase }}
+      </span>
+    </div>
+  </transition>
 </template>
 
 <script>

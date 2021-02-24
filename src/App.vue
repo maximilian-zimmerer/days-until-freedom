@@ -97,6 +97,14 @@ textarea:active {
 ::placeholder {
   color: #f5c1cd !important;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 
 @media (min-width: 769px) {
   html,

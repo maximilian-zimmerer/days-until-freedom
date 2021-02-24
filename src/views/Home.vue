@@ -12,10 +12,16 @@
     <section class="snap">
       <About :phrases="phrases" />
     </section>
-    <!-- main -->
-    <section v-if="!scrolled" class="nav">
-      <span>(Scroll to Add)</span>
+    <!-- Copyright -->
+    <section class="snap">
+      <Copyright />
     </section>
+    <!-- main -->
+    <transition name="fade">
+      <section v-if="!scrolled" class="nav">
+        <span>(Scroll to Add)</span>
+      </section>
+    </transition>
   </div>
 </template>
 
@@ -24,11 +30,12 @@ import db from "../firebaseInit";
 import About from "@/components/About.vue";
 import Header from "@/components/Header.vue";
 import Submission from "@/components/Submission.vue";
+import Copyright from "@/components/Copyright.vue";
 const fbPhrases = db.collection("phrases");
 
 export default {
   name: "Home",
-  components: { Header, Submission, About },
+  components: { Header, Submission, About, Copyright },
   data() {
     return {
       phrases: [],

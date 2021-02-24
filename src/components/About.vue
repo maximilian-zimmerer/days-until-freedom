@@ -8,13 +8,12 @@
         <span @click="toggle">{{ toggler }}</span>
       </section>
       <span class="info-body" v-if="toggleInfo">
-        On February 2, 2021, The Prime Minister set out a roadmap to cautiously
+        On February 2, 2021, the Prime Minister set out a roadmap to cautiously
         ease lockdown restrictions in the United Kingdom. By the last step,
         which is reached no earlier than June 21, all legal limits on social
-        contact can be removed are hoped to be removed. This website lives to
-        emphasize people's anticipation for a normal life and invites the public
-        to submit things that they look forward to doing in a post-covid
-        England.
+        contact are hoped to be removed. This website lives to emphasize
+        people's anticipation for a normal life and invites the public to submit
+        things that they look forward to doing in a post-covid England.
       </span>
     </section>
     <!-- Stuff people miss -->
@@ -46,9 +45,9 @@ export default {
   computed: {
     toggler() {
       if (this.toggleInfo) {
-        return "●";
+        return "⦿";
       } else {
-        return "○";
+        return "⦾";
       }
     },
   },
