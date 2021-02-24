@@ -1,7 +1,9 @@
+const sslRedirect = require("heroku-ssl-redirect").default;
 const port = process.env.PORT || 8080;
 const express = require("express");
 const app = express();
 
+app.use(sslRedirect());
 app.use(express.static(__dirname + "/dist/"));
 
 app.get(/.*/, (req, res) => {
