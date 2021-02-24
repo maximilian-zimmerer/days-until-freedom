@@ -44,7 +44,7 @@ export default {
         const date = new Date();
         const timeStamp = firebase.firestore.Timestamp.fromDate(date);
         let tempPhrase = {
-          text: this.text,
+          text: this.text.toLowerCase(),
           id: uuidv4(),
           timeStamp: timeStamp.seconds,
         };
