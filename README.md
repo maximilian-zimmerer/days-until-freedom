@@ -8,7 +8,7 @@ To view the entire case study, please visit my [website](https://www.maxi.studio
 
 ## Live App
 
-To try out Days Until Freedom, please visit the [live app](https://days_until_freedom.maxi.studio).
+To try out Days Until Freedom, please visit the [live app](https://days-until-freedom.maxi.studio).
 
 ![alt text](https://cdn.glitch.com/b4cd9c5e-4515-4298-ac12-97fd727eaf29%2Fapp_overview.png?v=1614186279499)
 
