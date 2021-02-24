@@ -38,7 +38,7 @@ export default {
   methods: {
     addPhrase() {
       if (filter.isProfane(this.text)) {
-        this.placeholder = "Please don't user profanity.";
+        this.placeholder = "Please don't use profanity.";
         this.text = "";
       } else if (this.text != "") {
         const date = new Date();
