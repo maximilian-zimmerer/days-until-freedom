@@ -4,7 +4,7 @@
     <section class="info">
       <!-- Header -->
       <section class="info-header">
-        <span>Wtf is this?</span>
+        <span>What is this?</span>
         <span @click="toggle">{{ toggler }}</span>
       </section>
       <!-- Body -->
@@ -22,7 +22,7 @@
       <!-- Header -->
       <section class="phrases-header">
         <span>Not much longer until...</span>
-        <span>{{ phrases.length }}</span>
+        <span>{{ "(" + phrases.length + ")" }}</span>
       </section>
       <!-- Body -->
       <section class="phrases-body">
