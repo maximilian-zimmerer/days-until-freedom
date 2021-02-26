@@ -1,13 +1,13 @@
 <template>
   <div class="main-wrapper">
-    <!-- About the page -->
+    <!-- About -->
     <section class="info">
-      <!-- About -->
+      <!-- Header -->
       <section class="info-header">
         <span>Wtf is this?</span>
         <span @click="toggle">{{ toggler }}</span>
       </section>
-
+      <!-- Body -->
       <span class="info-body" v-if="toggleInfo">
         On February 2, 2021, the Prime Minister set out a roadmap to cautiously
         ease lockdown restrictions in the United Kingdom. By the last step,
@@ -17,10 +17,15 @@
         things that they look forward to doing in a post-covid England.
       </span>
     </section>
-    <!-- Stuff people miss -->
+    <!-- Data -->
     <section class="phrases">
-      <span>Not much longer until...</span>
-      <section class="scroll-container">
+      <!-- Header -->
+      <section class="phrases-header">
+        <span>Not much longer until...</span>
+        <span>{{ phrases.length }}</span>
+      </section>
+      <!-- Body -->
+      <section class="phrases-body">
         <span v-for="phrase in phrases" :key="phrase.id"
           >{{ phrase.text }}
         </span>
@@ -63,19 +68,22 @@ export default {
   flex-direction: column;
   grid-template-columns: 1fr 1fr;
 }
+span {
+  padding: 1em;
+}
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+}
 .info {
   height: auto;
   background-color: #aae7e2;
 }
-.info span {
-  width: auto;
-  padding: 1em;
-  height: auto;
-}
 .info-header {
-  width: 100%;
   height: auto;
-  display: flex;
   color: #aae7e2;
   flex-direction: row;
   background-color: #f04f33;
@@ -86,39 +94,36 @@ export default {
   font-family: Playfair;
 }
 .info-header span:nth-of-type(2) {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
   font-family: Playfair;
 }
 .phrases {
-  height: 100%;
+  height: auto;
   background-color: #f5c1cd;
 }
-.phrases span {
-  padding: 1em;
-  color: #38146b;
-  border-bottom: 1px solid #38146b;
-}
-.phrases > span {
-  background-color: #38146b;
+.phrases-header {
+  height: auto;
+  flex-shrink: 0;
   color: #f5c1cd;
-  border: none;
+  flex-direction: row;
+  background-color: #38146b;
+  justify-content: space-between;
 }
-section {
-  height: 100%;
-  display: flex;
-  overflow: scroll;
-  flex-direction: column;
-}
-.scroll-container {
-  overflow: scroll;
-}
-.scroll-container span {
+.phrases-header span:nth-of-type(2) {
   font-family: Playfair;
 }
-.scroll-container span:nth-last-of-type(1) {
-  border-bottom: none;
+.phrases-body {
+  overflow: scroll;
 }
-
+.phrases-body span {
+  color: #38146b;
+  font-family: Playfair;
+  border-bottom: 1px solid #38146b;
+}
+.phrases-body span:nth-last-of-type(1) {
+  border: none;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .main-wrapper {
     display: flex;
@@ -129,10 +134,8 @@ section {
     border-right: none;
   }
   .info-header span:nth-of-type(2) {
-    display: inline;
-  }
-  section {
-    height: auto;
+    opacity: 1;
+    pointer-events: all;
   }
 }
 </style>
