@@ -1692,4 +1692,4 @@ var uu=function(){function t(t){this.observer=t,this.muted=!1}return t.prototype
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */var f=function(){function t(t){this.name=t,this.providers=new Map}return t.prototype.addComponent=function(t){var e=this.getProvider(t.name);if(e.isComponentSet())throw new Error("Component "+t.name+" has already been registered with "+this.name);e.setComponent(t)},t.prototype.addOrOverwriteComponent=function(t){var e=this.getProvider(t.name);e.isComponentSet()&&this.providers.delete(t.name),this.addComponent(t)},t.prototype.getProvider=function(t){if(this.providers.has(t))return this.providers.get(t);var e=new u(t,this);return this.providers.set(t,e),e},t.prototype.getProviders=function(){return Array.from(this.providers.values())},t}()}}]);
-//# sourceMappingURL=chunk-vendors.d0f2d2dd.js.map
+//# sourceMappingURL=chunk-vendors.53d0f524.js.map
