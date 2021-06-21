@@ -16,7 +16,7 @@ export default {
   props: ["phrases"],
   data() {
     return {
-      end: new Date("06/21/2021 12:00 AM"),
+      end: new Date("07/19/2021 12:00 AM"),
       remaining: "",
       timer: "",
       index: 0,

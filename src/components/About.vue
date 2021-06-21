@@ -16,6 +16,12 @@
         people's anticipation for a normal life and invites the public to submit
         things that they look forward to doing in a post-covid England.
       </span>
+      <!-- Update -->
+      <span class="info-body" v-if="toggleInfo">
+        On June 14, 2021, the Prime Minister announced a delay of four weeks to
+        the next phase of England’s lockdown reopening, which is now set for
+        July 19.
+      </span>
     </section>
     <!-- Data -->
     <section class="phrases">
@@ -92,6 +98,7 @@ section {
 .info-body {
   color: #f04f33;
   font-family: Playfair;
+  border-bottom: 1px solid #f04f33;
 }
 .info-header span:nth-of-type(2) {
   opacity: 0;
@@ -136,6 +143,9 @@ section {
   .info-header span:nth-of-type(2) {
     opacity: 1;
     pointer-events: all;
+  }
+  .info-body:nth-of-type(2) {
+    border: none;
   }
 }
 </style>
