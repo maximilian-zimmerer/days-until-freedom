@@ -27,7 +27,7 @@
     <section class="phrases">
       <!-- Header -->
       <section class="phrases-header">
-        <span>Not much longer until...</span>
+        <span>We used to miss...</span>
         <span>{{ "(" + phrases.length + ")" }}</span>
       </section>
       <!-- Body -->

@@ -30,13 +30,6 @@ export default {
       const day = hour * 24;
       let now = new Date();
       let distance = this.end - now;
-
-      if (distance < 0) {
-        clearInterval(this.timer);
-        this.remaining = 0;
-        return;
-      }
-
       let d = Math.floor(distance / day);
       let h = Math.floor((distance % day) / hour);
       let m = Math.floor((distance % hour) / minute);

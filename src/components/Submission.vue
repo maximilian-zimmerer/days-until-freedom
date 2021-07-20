@@ -9,7 +9,7 @@
         :maxlength="max"
         onfocus="this.placeholder = ''"
         :placeholder="this.placeholder"
-        onblur="this.placeholder = 'I miss doing this...'"
+        onblur="this.placeholder = 'I (used to) miss doing this...'"
       ></textarea>
       <!-- buttons -->
       <section class="buttons">
@@ -32,7 +32,7 @@ export default {
     return {
       max: 50,
       text: "",
-      placeholder: "I miss doing this...",
+      placeholder: "I (used to) miss doing this...",
     };
   },
   methods: {
