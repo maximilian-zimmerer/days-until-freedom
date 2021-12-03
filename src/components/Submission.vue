@@ -82,7 +82,7 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   /* disable input */
-  opacity: 50%;
+  opacity: 0.5;
   pointer-events: none;
 }
 .buttons {
