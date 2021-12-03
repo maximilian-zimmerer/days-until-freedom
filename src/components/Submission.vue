@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrapper">
     <!-- input -->
-    <form class="submission-form" v-on:submit.prevent="addPhrase">
+    <form class="submission-form disable" v-on:submit.prevent="addPhrase">
       <textarea
         rows="15"
         type="text"
@@ -10,11 +10,12 @@
         onfocus="this.placeholder = ''"
         :placeholder="this.placeholder"
         onblur="this.placeholder = 'I (used to) miss doing this...'"
+        disabled
       ></textarea>
       <!-- buttons -->
       <section class="buttons">
         <span class="wordCount">{{ this.remainingChars }}</span>
-        <input type="submit" value="Submit" />
+        <input disabled type="submit" value="Submit" />
       </section>
     </form>
   </div>
@@ -32,7 +33,7 @@ export default {
     return {
       max: 50,
       text: "",
-      placeholder: "I (used to) miss doing this...",
+      placeholder: "Submissions closed - scroll down to see more.",
     };
   },
   methods: {
@@ -80,6 +81,10 @@ export default {
   height: min-content;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
+}
+.disable {
+  opacity: 50% !important;
+  pointer-events: none !important;
 }
 .buttons {
   height: auto;
