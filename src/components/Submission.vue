@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrapper">
     <!-- input -->
-    <form class="submission-form disable" v-on:submit.prevent="addPhrase">
+    <form class="submission-form" v-on:submit.prevent="addPhrase">
       <textarea
         rows="15"
         type="text"
@@ -81,10 +81,9 @@ export default {
   height: min-content;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-}
-.disable {
-  opacity: 50% !important;
-  pointer-events: none !important;
+  /* disable input */
+  opacity: 50%;
+  pointer-events: none;
 }
 .buttons {
   height: auto;
