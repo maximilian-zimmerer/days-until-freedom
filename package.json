@@ -11,9 +11,7 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "core-js": "^3.6.5",
-    "express": "^4.17.1",
     "firebase": "^8.2.9",
-    "heroku-ssl-redirect": "^0.1.1",
     "uuid": "^8.3.1",
     "vue": "^2.6.11"
   },
